@@ -10,6 +10,7 @@ const options = {};
 // options.port = parseInt(process.argv[2]);
 // options.config = { name: 'Total.js' };
 // options.sleep = 3000;
-
+options.ip = 'auto';
+options.port = process.env.PORT;
 require('total.js').http('release', options);
 // require('total.js').cluster.http(5, 'release', options);
