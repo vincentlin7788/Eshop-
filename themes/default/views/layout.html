@@ -41,11 +41,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 					<a href="@{sitemap_url('account')}" class="b">@{user.name}</a>
 					<script>console.log("in");</script>
 					<script>
-					//console.log(@{user.name});
-					console.log("sd");
 					window.dataLayer = window.dataLayer || [];
 					window.dataLayer.push({
-					'event': 'success',
+					'eventO': 'success',
 					'UserID': '@{user.name}'
 					});
 					</script>
