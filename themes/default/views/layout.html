@@ -12,19 +12,11 @@
 	<script src="//cdn.componentator.com/spa.min@14.js"></script>
 	@{import('meta', 'head', 'default.css', 'default.js', 'favicon.ico')}
 	<script>var LOGGED = +'@{if user}1@{else}0@{fi}';</script>
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id=GTM-5VXMCSJ';f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-5VXMCSJ');</script>
-<!-- End Google Tag Manager -->
+
 
 </head>
 <body data-jc="exec,binder,modificator">
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5VXMCSJ"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+
 	<br />
 	<div data-jc="loading" class="ui-loading@{if !repository.loading} hidden@{fi}"></div>
 	<div data-jc="shoppingcart" data-jc-path="shoppingcart" data-jc-config="discount:@{if user}@{user.discount}@{else}0@{fi}"></div>
@@ -38,6 +30,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				@{if user}
 					<a href="@{sitemap_url('account')}" class="b">@{user.name}</a>
 					<script>
+					console.log(@{user.name});
 					window.dataLayer = window.dataLayer || []
 					dataLayer.push({
 					'UserID': @{user.name}
@@ -114,7 +107,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	</div>
 	<br />
 	<br />
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id=GTM-5VXMCSJ';f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5VXMCSJ');</script>
+<!-- End Google Tag Manager -->
 
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5VXMCSJ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 	<script src="@{global.js}"></script>
 
 </body>
