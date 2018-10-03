@@ -42,7 +42,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 					console.log(@{user.name});
 					console.log("sd");
 					window.dataLayer = window.dataLayer || [];
-					window.dataLayer.push({
+					dataLayer.push({
+					'event': 'success',
 					'UserID': 'abc'
 					});
 					</script>
