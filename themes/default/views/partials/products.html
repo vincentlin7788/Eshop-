@@ -30,21 +30,24 @@
 			</div>
 		</div>
 	</div>
+
+@{end}
+</div>
 <script>
 window.dataLayer = window.dataLayer || [];
 window.dataLayer.push({
   'ecommerce': {
-                         // Local currency is optional.
+     
     'impressions': [
+	@{foreach m in model.items}
      {
        'name': '@{m.name}',       // Name or ID is required.
        //'id': '@{m.name + "1"}',
        'price': '@{!m.priceold.currency()}',
        'category': '@{m.category}'
-     }
+     },
+	 @{end}
 ]
   }
 });
 </script>
-@{end}
-</div>
