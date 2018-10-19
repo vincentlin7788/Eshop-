@@ -34,11 +34,11 @@
 window.dataLayer = window.dataLayer || [];
 window.dataLayer.push({
   'ecommerce': {
-    'currencyCode': 'HKD',                       // Local currency is optional.
+                         // Local currency is optional.
     'impressions': [
      {
        'name': @{m.name},       // Name or ID is required.
-       'id': @{m.name + "1"},
+       //'id': @{m.name + "1"},
        'price': @{!m.priceold.currency()},
        'category': @{m.category}
      }
