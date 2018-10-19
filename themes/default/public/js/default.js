@@ -44,6 +44,20 @@ $(document).ready(function() {
 		var btn = $(this);
 		SETTER('shoppingcart', 'add', btn.attrd('id'), +btn.attrd('price'), 1, btn.attrd('name'), btn.attrd('idvariant'), btn.attrd('variant'));
 		console.log(btn.attrd('name'));
+		
+		window.dataLayer = window.dataLayer || [];
+		window.dataLayer.push({
+			'event': 'addToCart',
+			'ecommerce': {
+				'currencyCode': 'HKD',
+				'add': {                                // 'add' actionFieldObject measures.
+				'products': [{                        //  adding a product to a shopping cart.
+				'name': 'btn.attrd('name')',
+				'price': 'btn.attrd('price')'
+       }]
+    }
+  }
+});
 		setTimeout(refresh_addcart, 200);
 	});
 
