@@ -130,4 +130,22 @@
 	</div>
 	@{fi}
 
+<script>
+// Measure a view of product details. This example assumes the detail view occurs on pageload,
+// and also tracks a standard pageview of the details page.
+window.dataLayer = window.dataLayer || [];
+window.dataLayer.push({
+  'ecommerce': {
+    'detail': {
+      'actionField': {'list': '@(Category)'},    // 'detail' actions have an optional list property.
+      'products': [{
+        'name': '@{title}',         // Name or ID is required.
+        'price': '@(Old price:)',
+        'category': '@(Category)'
+       }]
+     }
+   }
+});
+</script>
+
 @{fi}
