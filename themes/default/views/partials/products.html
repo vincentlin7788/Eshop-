@@ -37,10 +37,10 @@ window.dataLayer.push({
                          // Local currency is optional.
     'impressions': [
      {
-       'name': @{m.name},       // Name or ID is required.
-       //'id': @{m.name + "1"},
-       'price': @{!m.priceold.currency()},
-       'category': @{m.category}
+       'name': '@{m.name}',       // Name or ID is required.
+       //'id': '@{m.name + "1"}',
+       'price': '@{!m.priceold.currency()}',
+       'category': '@{m.category}'
      }
 ]
   }
