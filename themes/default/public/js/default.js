@@ -52,8 +52,8 @@ $(document).ready(function() {
 				'currencyCode': 'HKD',
 				'add': {                                // 'add' actionFieldObject measures.
 				'products': [{                        //  adding a product to a shopping cart.
-				'name': 'btn.attrd('name')',
-				'price': 'btn.attrd('price')'
+				'name': btn.attrd('name'),
+				'price': btn.attrd('price')
        }]
     }
   }
