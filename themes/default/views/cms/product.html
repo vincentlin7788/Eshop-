@@ -137,11 +137,11 @@ window.dataLayer = window.dataLayer || [];
 window.dataLayer.push({
   'ecommerce': {
     'detail': {
-      'actionField': {'list': '@(Category)'},    // 'detail' actions have an optional list property.
+      'actionField': {'list': '@{model.category.text}'},    // 'detail' actions have an optional list property.
       'products': [{
         'name': '@{title}',         // Name or ID is required.
-        'price': '@(Old price:)',
-        'category': '@(Category)'
+        'price': '@{model.prices[0].price}',
+        'category': '@{model.category.text}'
        }]
      }
    }
