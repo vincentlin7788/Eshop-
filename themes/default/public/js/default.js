@@ -43,7 +43,7 @@ $(document).ready(function() {
 	$(document).on('click', '.addcart', function() {
 		var btn = $(this);
 		SETTER('shoppingcart', 'add', btn.attrd('id'), +btn.attrd('price'), 1, btn.attrd('name'), btn.attrd('idvariant'), btn.attrd('variant'));
-
+		console.log(btn.attrd('name'));
 		setTimeout(refresh_addcart, 200);
 	});
 
