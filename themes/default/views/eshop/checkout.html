@@ -252,6 +252,7 @@
 		// Removes products with zero count
 		shoppingcart.clean();
 		order.form.items = shoppingcart.get().items;
+		console.log(order.form.items);
 		SETTER('loading', 'show');
 
 		AJAX('POST /api/orders/create/', order.form, function(response) {
