@@ -236,6 +236,32 @@
 					// a hidden reference to this virtualized instance
 					obj.element.get(0).$item = obj;
 					container.append(obj.element);
+					
+					
+					var shoppingcartT = FIND('shoppingcart');
+					order.form.items = shoppingcartT.get().items;
+					window.dataLayer = window.dataLayer || [];
+					window.dataLayer.push({
+					'event': 'checkout',
+					'ecommerce': {
+									'checkout': {
+									  'products': [{                            // List of productFieldObjects.
+										'name': order.form.items[0].name,     // Name or ID is required.
+										'price': order.form.items[0].price,
+										'quantity': order.form.items[0].count                         // Optional fields may be omitted or set to empty string.
+									   }]
+									}
+								  }
+					});
+					
+					
+					
+					
+					
+					
+					
+					
+					
 				});
 			});
 		};
