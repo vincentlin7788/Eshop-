@@ -156,7 +156,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://ww
       xfbml      : true,
       version          : 'v3.2'
     });
+	
+	
+		FB.Event.subscribe('customerchat.load', function() {
+    
+          // callback for events triggered by the plugin
+            console.log("clicked Messenger!");
+   
+      });
+	
+	
+	
   };
+  
+      
+
 
   (function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
